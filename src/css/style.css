@@ -5,7 +5,7 @@
         NARANJA => #ff9f43
         VERDE => #27ae60
     */
-    --main-color: #27ae60;
+    --main-color: #ff9f43;
     --link-color: #353b48;
 }
 
@@ -30,6 +30,12 @@ a {
 a:hover {
     color: var(--link-color);
 }
+
+body {
+    background-color: rgb(246, 246, 246);
+}
+
+/*--------HEADER---------*/
 
 header {
     position: absolute;
@@ -65,6 +71,7 @@ header {
     display: inline-flex;
     list-style: none;
     line-height: normal;
+    font-weight: 600;
 }
 
 .top ul li {
@@ -79,15 +86,15 @@ header {
 
 .logo {
     margin-left: 6rem;
-    height: 200px;
+    height: 12.5rem;
     display: flex;
     justify-items: center;
     align-items: center;
 }
 
 .logo img {
-    width: 150px;
-    height: 150px;
+    width: 9.375rem;
+    height: 9.375rem;
 }
 
 .logo h3 {
@@ -101,6 +108,8 @@ header nav {
     text-align: center;
     background-color: var(--main-color);
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    z-index: 999;
+    font-weight: 700;
 }
 
 .fixed {
@@ -216,9 +225,84 @@ header nav div.open span:last-child {
     transform-origin: 0.5rem 0rem;
 }
 
-body {
-    background-color: rgb(246, 246, 246);
-    height: 10000px;
+/*--------MAIN---------*/
+.container {
+    max-width: 87rem;
+    margin: 0 auto;
+    margin-top: 20rem;
+    /*    background-color: #353b48;
+  */
+    height: 100rem;
+    display: grid;
+    grid-template-columns: 68% 30%;
+    grid-gap: 2%;
+}
+
+.container .content-left {
+    background-color: tomato;
+    height: 60rem;
+    grid-column-gap: 1;
+}
+.container .content-right {
+    /*    background-color: aquamarine;
+  */
+    height: 60rem;
+    grid-column: 2;
+    overflow: hidden;
+}
+
+.container .content-right .results-title {
+    width: 89%;
+    margin-top: 1rem;
+    padding: 1.2rem;
+    display: flex;
+    justify-content: center;
+    background-color: #fff;
+    border-radius: 0.5rem;
+    border: 0.5px solid rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+.container .content-right .results-content {
+    width: 99%;
+    margin-top: 0.5rem;
+    display: flex;
+    justify-content: center;
+    background-color: #fff;
+    border-radius: 0.5rem;
+    border: 0.5px solid rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+.container .content-right .results-content ul {
+    margin-top: 0;
+    list-style: none;
+    width: 100%;
+    border: 0.5px solid rgba(0, 0, 0, 0.1);
+    border-radius: 0.5rem;
+}
+.container .content-right .results-content ul li {
+    position: relative;
+    line-height: 2rem;
+    color: rgba(0, 0, 0, 0.7);
+    height: 3rem;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 40% 20% 40%;
+    grid-gap: 2%;
+}
+
+.container .content-right .results-content ul li h3 {
+    padding: 0.5rem;
+    position: absolute;
+    transform: translateX(-50%);
+    color: rgba(0, 0, 0, 1);
+    left: 50%;
+}
+
+.container .content-right .results-content ul li .game-result {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
 }
 
 @media screen and (max-width: 800px) {
@@ -285,5 +369,22 @@ body {
     ul.links li.dropdown:hover ul.dropdown-menu {
         visibility: hidden;
         opacity: 0;
+    }
+
+    .container {
+        margin-top: 5rem;
+        grid-template-columns: 100% 0%;
+        grid-gap: 2%;
+    }
+
+    .container .content-left {
+        background-color: tomato;
+        height: 60rem;
+        grid-column-gap: 1;
+    }
+    .container .content-right {
+        background-color: aquamarine;
+        height: 60rem;
+        grid-column: 1;
     }
 }
