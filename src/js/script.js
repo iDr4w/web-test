@@ -24,12 +24,8 @@ var xhReq = new XMLHttpRequest();
 xhReq.open("GET", "https://spreadsheets.google.com/feeds/cells/13gmUgiwVI4eg3Ufc-C_WMouv8HDABk5YexB-9MNU9sU/1/public/values?alt=json", false);  
 xhReq.send(null);
 var jsonObject = JSON.parse(xhReq.responseText);
-
 entry = jsonObject.feed.entry;
 
-console.log(entry);
-
-for (let step = 0; step < entry.length; step++) {
-  // Se ejecuta 5 veces, con valores del paso 0 al 4.
-  results[step].innerHTML = entry[step].content.$t;
+for (let i = 0; i < entry.length; i++) {
+  results[i].innerHTML = entry[i].content.$t;
 }
