@@ -1,7 +1,7 @@
 var nav = document.querySelector("#nav");
 var menu = document.querySelector("#burger_menu");
 var links = document.querySelector(".links");
-var main = document.querySelector("main");
+var html = document.querySelector("html");
 var results = document.querySelectorAll(".game-result");
 let navTop = nav.offsetTop;
 let entry = [];
@@ -9,7 +9,7 @@ let entry = [];
 menu.addEventListener("click", () => {
   menu.classList.toggle('open');
   links.classList.toggle('open');
-  main.classList.toggle('open');
+  html.classList.toggle('open');
 });
 
 window.addEventListener("scroll",() => {
