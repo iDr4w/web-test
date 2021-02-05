@@ -29,13 +29,13 @@ window.addEventListener("scroll",() => {
 });
 
 var xhReq = new XMLHttpRequest();
-xhReq.open("GET", "https://spreadsheets.google.com/feeds/cells/13gmUgiwVI4eg3Ufc-C_WMouv8HDABk5YexB-9MNU9sU/1/public/values?alt=json", false);  
+xhReq.open("GET", "https://spreadsheets.google.com/feeds/cells/1gVcxUeGsA0JEX6kLBPKC5S2NtY2uwhLvky9T-vEr2eI/1/public/values?alt=json", false);  
 xhReq.send(null);
 var jsonObject = JSON.parse(xhReq.responseText);
 entry = jsonObject.feed.entry;
 
 for (let i = 0; i < entry.length; i++) {
-  results[i].innerHTML = entry[i].content.$t;
+  results[i].innerHTML = entry[i + 3].content.$t;
 };
 
 if(width <= 800){

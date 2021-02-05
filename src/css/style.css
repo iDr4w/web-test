@@ -241,6 +241,7 @@ header nav div.open span:last-child {
 
 .container .content-left {
     background-color: tomato;
+    margin-top: 1rem;
     height: 60rem;
     grid-column: 1;
     display: grid;
@@ -255,11 +256,7 @@ header nav div.open span:last-child {
 }
 
 .container .content-right {
-    /*    background-color: aquamarine;
-  */
-    height: 60rem;
     grid-column: 2;
-    overflow: hidden;
 }
 
 .container .content-right .results-title {
@@ -289,22 +286,31 @@ header nav div.open span:last-child {
 .container .content-right .results-content ul {
     margin-top: 0;
     list-style: none;
-    width: 100%;
-    border: 0.5px solid rgba(0, 0, 0, 0.1);
+    transform: translateX(-0.5rem);
+    width: 94%;
     border-radius: 0.5rem;
 }
 .container .content-right .results-content ul li {
     position: relative;
-    line-height: 2rem;
-    color: rgba(0, 0, 0, 0.7);
-    height: 3rem;
+    margin-right: 1rem;
+    line-height: 1rem;
+    height: 3.5rem;
     width: 100%;
     display: grid;
     grid-template-columns: 40% 20% 40%;
     grid-gap: 2%;
 }
 
+.container .content-right .results-content ul li p {
+    color: rgba(0, 0, 0, 0.7);
+    font-size: 14px;
+    font-weight: 300;
+}
+
 .container .content-right .results-content ul li h3 {
+    font-size: 20px;
+    font-weight: 700;
+    margin-top: 1.5rem;
     padding: 0.5rem;
     position: absolute;
     transform: translateX(-50%);
