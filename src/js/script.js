@@ -10,6 +10,11 @@ document.body.clientWidth;
 let entry = [];
 
 menu.addEventListener("click", () => {
+  if(menu.classList == 'open'){
+    dropdown.forEach(item => {
+        item.classList.remove('open');
+    })
+  }
   menu.classList.toggle('open');
   links.classList.toggle('open');
   html.classList.toggle('open');

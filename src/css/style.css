@@ -4,8 +4,9 @@
     /*
         NARANJA => #ff9f43
         VERDE => #27ae60
+        MORADO => #9980FA
     */
-    --main-color: #27ae60;
+    --main-color: #9980fa;
     --link-color: #353b48;
 }
 
@@ -366,7 +367,7 @@ header nav div.open span:last-child {
         order: -3;
         display: block;
         box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-        transform: translateY(-100%);
+        transform: translateY(-150%);
         transition: transform 300ms ease-in-out;
     }
 
