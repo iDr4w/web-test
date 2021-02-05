@@ -390,6 +390,8 @@ header nav div.open span:last-child {
     }
 
     ul.links li.dropdown ul.dropdown-menu {
+        left: 50%;
+        transform: translateX(-50%);
         height: 0rem;
         width: 92%;
         background-color: transparent;
