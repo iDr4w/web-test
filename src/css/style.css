@@ -17,7 +17,7 @@ html,
 }
 
 html.open {
-    overflow-y: hidden;
+    overflow: hidden;
 }
 
 a {
