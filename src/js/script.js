@@ -5,8 +5,7 @@ var html = document.querySelector("html");
 var results = document.querySelectorAll(".game-result");
 var dropdown = document.querySelectorAll(".dropdown");
 let navTop = nav.offsetTop;
-const width = window.innerWidth || document.documentElement.clientWidth || 
-document.body.clientWidth;
+const width = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
 let entry = [];
 
 if(width <= 800){
@@ -44,5 +43,4 @@ entry = jsonObject.feed.entry;
 
 for (let i = 0; i < entry.length-3; i++) {
   results[i].innerHTML = entry[i+3].content.$t;
-  console.log(entry[i + 3].content.$t);
 };
