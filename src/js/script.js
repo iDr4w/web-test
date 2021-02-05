@@ -9,6 +9,14 @@ const width = window.innerWidth || document.documentElement.clientWidth ||
 document.body.clientWidth;
 let entry = [];
 
+if(width <= 800){
+  dropdown.forEach(item => {
+    item.addEventListener("click", () => {
+      item.classList.toggle('open');
+    });
+  })
+};
+
 menu.addEventListener("click", () => {
   if(menu.classList == 'open'){
     dropdown.forEach(item => {
@@ -34,14 +42,7 @@ xhReq.send(null);
 var jsonObject = JSON.parse(xhReq.responseText);
 entry = jsonObject.feed.entry;
 
-for (let i = 0; i < entry.length; i++) {
-  results[i].innerHTML = entry[i + 3].content.$t;
-};
-
-if(width <= 800){
-  dropdown.forEach(item => {
-    item.addEventListener("click", () => {
-      item.classList.toggle('open');
-    });
-  })
+for (let i = 0; i < entry.length-3; i++) {
+  results[i].innerHTML = entry[i+3].content.$t;
+  console.log(entry[i + 3].content.$t);
 };

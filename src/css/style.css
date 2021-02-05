@@ -18,7 +18,7 @@ html,
 }
 
 html.open {
-    /* overflow: hidden;*/
+    overflow: hidden;
 }
 
 a {
@@ -352,12 +352,6 @@ header nav div.open span:last-child {
 
     header {
         display: flex;
-    }
-
-    header nav {
-        position: fixed;
-        top: 0;
-        left: 0;
     }
 
     header nav div {
