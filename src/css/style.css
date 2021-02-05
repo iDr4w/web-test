@@ -363,8 +363,14 @@ header nav div.open span:last-child {
     }
 
     ul.open {
-        transform: translateY(25%);
+        transform: translateY(7rem);
         margin-bottom: 4rem;
+    }
+
+    ul.links li {
+        height: 5rem;
+        transition: all 200ms ease-in-out;
+        overflow: hidden;
     }
 
     ul.links li:not(:last-child) {
@@ -379,9 +385,47 @@ header nav div.open span:last-child {
         opacity: 0;
     }
 
-    ul.links li.dropdown:hover ul.dropdown-menu {
+    ul.links li.dropdown.open {
+        height: 22rem;
+    }
+
+    ul.links li.dropdown ul.dropdown-menu {
+        height: 0rem;
+        width: 92%;
+        background-color: transparent;
         visibility: hidden;
         opacity: 0;
+        position: relative;
+        transition: all 150ms ease-in-out;
+    }
+
+    ul.links li.dropdown.open ul.dropdown-menu {
+        height: 14rem;
+        background-color: var(--link-color);
+        visibility: visible;
+        opacity: 1;
+    }
+
+    ul.links li.dropdown ul.dropdown-menu li {
+        justify-content: center;
+        text-align: center;
+        font-size: 18px;
+        visibility: hidden;
+        opacity: 0;
+        transition: all 150ms ease-in-out;
+    }
+
+    ul.links li.dropdown ul.dropdown-menu li::after {
+        display: none;
+    }
+
+    ul.links li.dropdown ul.dropdown-menu li a:hover {
+        color: #fff;
+    }
+
+    ul.links li.dropdown.open ul.dropdown-menu li {
+        visibility: visible;
+        opacity: 1;
     }
 
     .container {

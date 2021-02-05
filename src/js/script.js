@@ -3,7 +3,10 @@ var menu = document.querySelector("#burger_menu");
 var links = document.querySelector(".links");
 var html = document.querySelector("html");
 var results = document.querySelectorAll(".game-result");
+var dropdown = document.querySelectorAll(".dropdown");
 let navTop = nav.offsetTop;
+const width = window.innerWidth || document.documentElement.clientWidth || 
+document.body.clientWidth;
 let entry = [];
 
 menu.addEventListener("click", () => {
@@ -28,4 +31,12 @@ entry = jsonObject.feed.entry;
 
 for (let i = 0; i < entry.length; i++) {
   results[i].innerHTML = entry[i].content.$t;
-}
+};
+
+if(width <= 800){
+  dropdown.forEach(item => {
+    item.addEventListener("click", () => {
+      item.classList.toggle('open');
+    });
+  })
+};
