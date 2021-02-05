@@ -108,7 +108,7 @@ header nav {
     text-align: center;
     background-color: var(--main-color);
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-    z-index: 999;
+    z-index: 99;
     font-weight: 700;
 }
 
@@ -324,10 +324,12 @@ header nav div.open span:last-child {
     }
 
     .logo {
+        width: 80%;
         height: 5rem;
         position: fixed;
-        z-index: 9999;
+        z-index: 999;
         margin-left: 0;
+        background-color: var(--main-color);
     }
 
     .logo img {
@@ -341,6 +343,10 @@ header nav div.open span:last-child {
         color: white;
     }
 
+    header {
+        display: flex;
+    }
+
     header nav {
         position: fixed;
         top: 0;
@@ -349,6 +355,7 @@ header nav div.open span:last-child {
 
     header nav div {
         display: block;
+        background-color: var(--main-color);
     }
 
     ul.links {
@@ -356,6 +363,7 @@ header nav div.open span:last-child {
         border-radius: 0.5rem;
         font-size: 20px;
         margin: 0 1rem;
+        order: -3;
         display: block;
         box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
         transform: translateY(-100%);
