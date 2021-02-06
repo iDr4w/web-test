@@ -5,8 +5,9 @@
         NARANJA => #ffb142
         VERDE => #27ae60
         MORADO => #9980FA
+        ROJO => #e17055
     */
-    --main-color: #e17055;
+    --main-color: #27ae60;
     --link-color: #353b48;
 }
 
@@ -385,7 +386,6 @@ header div#burger_menu.open span:last-child {
 
     ul.open {
         transform: translateY(7rem);
-        margin-bottom: 4rem;
     }
 
     ul.links li {
