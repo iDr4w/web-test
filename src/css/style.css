@@ -370,7 +370,7 @@ header div#burger_menu.open span:last-child {
     header nav {
         background-color: transparent;
         pointer-events: none;
-        box-shadow: 0px 0px 0px rgba(0, 0, 0, 0);
+        box-shadow: none;
         height: 100vh;
         max-height: 100vh;
         overflow-y: scroll;
