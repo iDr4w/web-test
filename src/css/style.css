@@ -288,7 +288,23 @@ header div#burger_menu.open span:last-child {
 }
 
 .container .content-left .articles article h3 {
-    padding: 1rem 0.5rem;
+    padding: 1rem;
+}
+
+.container .content-left .articles article h3 a {
+    color: var(--link-color);
+    font-weight: 700;
+    transition: all 200ms ease-in-out;
+}
+
+.container .content-left .articles article h3 a:hover {
+    color: var(--main-color);
+}
+
+.container .content-left .articles article p {
+    padding: 0.5rem 1rem;
+    padding-bottom: 4rem;
+    text-align: justify;
 }
 
 .container .content-left .articles a.read-more {
@@ -298,21 +314,11 @@ header div#burger_menu.open span:last-child {
     color: var(--main-color);
     padding-left: 0.5rem;
     font-weight: 600;
-}
-
-.container .content-left .articles article h3 a {
-    color: var(--link-color);
-    font-weight: 700;
     transition: all 200ms ease-in-out;
 }
 
-.container .content-left .articles article p {
-    padding: 0.5rem;
-    text-align: justify;
-}
-
-.container .content-left .articles article h3 a:hover {
-    color: var(--main-color);
+.container .content-left .articles a.read-more:hover {
+    color: var(--link-color);
 }
 
 .container .content-left .pagination {
