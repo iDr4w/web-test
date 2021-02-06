@@ -5,44 +5,44 @@ var links = document.querySelector(".links");
 var results = document.querySelectorAll(".game-result");
 var dropdown = document.querySelectorAll(".dropdown");
 let navTop = nav.offsetTop;
-const width = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
 let entry = [];
 
-if(width <= 800){
-  dropdown.forEach(item => {
+dropdown.forEach((item) => {
     item.addEventListener("click", () => {
-      item.classList.toggle('open');
+        item.classList.toggle("open");
     });
-  })
-};
+});
 
 menu.addEventListener("click", () => {
-  if(menu.classList == 'open'){
-    dropdown.forEach(item => {
-        item.classList.remove('open');
-    })
-  } 
-  menu.classList.toggle('open');
-  nav.classList.toggle('blur');
-  links.classList.toggle('open');
-  html.classList.toggle('open');
+    if (menu.classList == "open") {
+        dropdown.forEach((item) => {
+            item.classList.remove("open");
+        });
+    }
+    menu.classList.toggle("open");
+    nav.classList.toggle("blur");
+    links.classList.toggle("open");
+    html.classList.toggle("open");
 });
 
-window.addEventListener("scroll",() => {
-  if (window.scrollY >= navTop) {    
-    nav.classList.add('fixed');
-  } else {
-    nav.classList.remove('fixed');    
-  }
+window.addEventListener("scroll", () => {
+    if (window.scrollY >= navTop) {
+        nav.classList.add("fixed");
+    } else {
+        nav.classList.remove("fixed");
+    }
 });
-
 
 var xhReq = new XMLHttpRequest();
-xhReq.open("GET", "https://spreadsheets.google.com/feeds/cells/1gVcxUeGsA0JEX6kLBPKC5S2NtY2uwhLvky9T-vEr2eI/1/public/values?alt=json", false);  
+xhReq.open(
+    "GET",
+    "https://spreadsheets.google.com/feeds/cells/1gVcxUeGsA0JEX6kLBPKC5S2NtY2uwhLvky9T-vEr2eI/1/public/values?alt=json",
+    false
+);
 xhReq.send(null);
 var jsonObject = JSON.parse(xhReq.responseText);
 entry = jsonObject.feed.entry;
 
-for (let i = 0; i < entry.length-3; i++) {
-  results[i].innerHTML = entry[i+3].content.$t;
-};
+for (let i = 0; i < entry.length - 3; i++) {
+    results[i].innerHTML = entry[i + 3].content.$t;
+}
