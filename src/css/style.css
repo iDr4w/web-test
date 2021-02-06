@@ -337,6 +337,7 @@ header div#burger_menu.open span:last-child {
         z-index: 999;
         margin-left: 0;
         background-color: var(--main-color);
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
     }
 
     .logo img {
@@ -363,8 +364,14 @@ header div#burger_menu.open span:last-child {
         position: fixed;
     }
 
+    header nav {
+        background-color: transparent;
+        height: 100vh;
+        max-height: fit-content;
+        overflow-y: scroll;
+        -webkit-overflow-scrolling: touch; // mobile safari
+    }
     ul.links {
-        position: absolute;
         background-color: var(--main-color);
         border-radius: 0.5rem;
         font-size: 20px;
