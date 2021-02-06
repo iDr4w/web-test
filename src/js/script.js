@@ -21,8 +21,9 @@ menu.addEventListener("click", () => {
     dropdown.forEach(item => {
         item.classList.remove('open');
     })
-  }
+  } 
   menu.classList.toggle('open');
+  nav.classList.toggle('blur');
   links.classList.toggle('open');
   html.classList.toggle('open');
 });
