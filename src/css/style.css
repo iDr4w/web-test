@@ -7,7 +7,7 @@
         MORADO => #9980FA
         ROJO => #e17055
     */
-    --main-color: #e17055;
+    --main-color: #9980fa;
     --link-color: #353b48;
 }
 
@@ -454,7 +454,7 @@ header div#burger_menu.open span:last-child {
         background-color: transparent;
         pointer-events: none;
         box-shadow: none;
-        height: 100vh;
+        height: 90vh;
         max-height: 100vh;
         overflow-y: scroll;
         -webkit-overflow-scrolling: touch; // mobile safari
@@ -477,7 +477,7 @@ header div#burger_menu.open span:last-child {
     }
 
     ul.open {
-        transform: translateY(7rem);
+        transform: translateY(6rem);
     }
 
     ul.links li {
