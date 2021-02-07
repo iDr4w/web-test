@@ -6,11 +6,18 @@ var results = document.querySelectorAll(".game-result");
 var dropdown = document.querySelectorAll(".dropdown");
 let navTop = nav.offsetTop;
 let entry = [];
+let vh = window.innerHeight * 0.01;
+document.documentElement.style.setProperty("--vh", `${vh}px`);
 
 dropdown.forEach((item) => {
     item.addEventListener("click", () => {
         item.classList.toggle("open");
     });
+});
+
+window.addEventListener("resize", () => {
+    vh = window.innerHeight * 0.01;
+    document.documentElement.style.setProperty("--vh", `${vh}px`);
 });
 
 menu.addEventListener("click", () => {

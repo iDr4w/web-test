@@ -456,6 +456,7 @@ header div#burger_menu.open span:last-child {
         pointer-events: none;
         box-shadow: none;
         height: 98vh;
+        height: calc(var(--vh, 1vh) * 100);
         max-height: 100vh;
         overflow-y: scroll;
         -webkit-overflow-scrolling: touch; // mobile safari
@@ -507,7 +508,7 @@ header div#burger_menu.open span:last-child {
     ul.links li.dropdown ul.dropdown-menu {
         left: 50%;
         transform: translateX(-50%);
-        height: 0rem;
+        height: fit-content;
         width: 92%;
         background-color: transparent;
         visibility: hidden;
@@ -517,7 +518,6 @@ header div#burger_menu.open span:last-child {
     }
 
     ul.links li.dropdown.open ul.dropdown-menu {
-        height: fit-content;
         background-color: var(--link-color);
         visibility: visible;
         opacity: 1;
