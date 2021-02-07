@@ -481,7 +481,7 @@ header div#burger_menu.open span:last-child {
     }
 
     ul.links li {
-        height: 4.3rem;
+        height: 4.4rem;
         transition: all 200ms ease-in-out;
         overflow: hidden;
     }
@@ -499,7 +499,7 @@ header div#burger_menu.open span:last-child {
     }
 
     ul.links li.dropdown.open {
-        height: 21rem;
+        height: fit-content;
     }
 
     ul.links li.dropdown ul.dropdown-menu {
@@ -515,7 +515,7 @@ header div#burger_menu.open span:last-child {
     }
 
     ul.links li.dropdown.open ul.dropdown-menu {
-        height: 14rem;
+        height: fit-content;
         background-color: var(--link-color);
         visibility: visible;
         opacity: 1;
