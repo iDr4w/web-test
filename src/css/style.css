@@ -6,8 +6,9 @@
         VERDE => #27ae60
         MORADO => #9980FA
         ROJO => #e17055
+        AZUL => #6a89cc
     */
-    --main-color: #6a89cc;
+    --main-color: #27ae60;
     --link-color: #353b48;
 }
 
@@ -500,6 +501,7 @@ header div#burger_menu.open span:last-child {
 
     ul.links li.dropdown.open {
         height: fit-content;
+        min-height: 4.4rem;
     }
 
     ul.links li.dropdown ul.dropdown-menu {
