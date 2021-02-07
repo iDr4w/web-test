@@ -308,6 +308,15 @@ header div#burger_menu.open span:last-child {
     text-align: justify;
 }
 
+.container .content-left .articles h5.date {
+    position: absolute;
+    bottom: 1.5rem;
+    left: 1.5rem;
+    color: var(--link-color);
+    opacity: 0.5;
+    font-weight: 600;
+}
+
 .container .content-left .articles a.read-more {
     position: absolute;
     bottom: 1.5rem;
@@ -395,14 +404,15 @@ header div#burger_menu.open span:last-child {
 }
 
 .container .content-right .results-content ul li h3 {
+    width: 100%;
     font-size: 20px;
     font-weight: 700;
     margin-top: 1.5rem;
     padding: 0.5rem;
     position: absolute;
-    transform: translateX(-50%);
+    justify-content: center;
+    display: flex;
     color: rgba(0, 0, 0, 1);
-    left: 50%;
 }
 
 .container .content-right .results-content ul li .game-result {
@@ -483,8 +493,7 @@ header div#burger_menu.open span:last-child {
     }
 
     ul.links li {
-        height: 4.4rem;
-        transition: all 200ms ease-in-out;
+        height: 5rem;
         overflow: hidden;
     }
 
@@ -502,7 +511,7 @@ header div#burger_menu.open span:last-child {
 
     ul.links li.dropdown.open {
         height: fit-content;
-        min-height: 4.4rem;
+        min-height: 5rem;
     }
 
     ul.links li.dropdown ul.dropdown-menu {

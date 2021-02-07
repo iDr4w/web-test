@@ -50,6 +50,8 @@ xhReq.send(null);
 var jsonObject = JSON.parse(xhReq.responseText);
 entry = jsonObject.feed.entry;
 
+document.getElementById("jornada").innerHTML = "JORNADA " + jsonObject.feed.title.$t;
+
 for (let i = 0; i < entry.length - 3; i++) {
     results[i].innerHTML = entry[i + 3].content.$t;
 }
