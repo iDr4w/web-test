@@ -8,7 +8,7 @@
         ROJO => #e17055
         AZUL => #6a89cc
     */
-    --main-color: #27ae60;
+    --main-color: #ffb142;
     --link-color: #353b48;
 }
 
@@ -265,7 +265,7 @@ header div#burger_menu.open span:last-child {
     position: relative;
     overflow: hidden;
     width: 100%;
-    height: fit-content;
+    height: max-content;
     border-radius: 1rem;
     background-color: #fff;
     border: 0.5px solid rgba(0, 0, 0, 0.1);
@@ -289,6 +289,7 @@ header div#burger_menu.open span:last-child {
 
 .container .content-left .articles article h3 {
     padding: 1rem;
+    text-align: justify;
 }
 
 .container .content-left .articles article h3 a {
@@ -303,8 +304,11 @@ header div#burger_menu.open span:last-child {
 
 .container .content-left .articles article p {
     padding: 0.5rem 1rem;
-    padding-bottom: 4rem;
     text-align: justify;
+}
+
+.container .content-left .articles article p:last-of-type {
+    padding-bottom: 4rem;
 }
 
 .container .content-left .articles h5.date {
