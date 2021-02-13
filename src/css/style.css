@@ -8,7 +8,7 @@
         ROJO => #e17055
         AZUL => #6a89cc
     */
-    --main-color: #e17055;
+    --main-color: #ffb142;
     --link-color: #353b48;
 }
 
@@ -564,7 +564,7 @@ footer .divider.toleft {
     background: linear-gradient(
         to left bottom,
         transparent 49%,
-        var(--link-color) 50%
+        var(--main-color) 50%
     );
 }
 footer .divider.toright {
