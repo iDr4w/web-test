@@ -8,7 +8,7 @@
         ROJO => #e17055
         AZUL => #6a89cc
     */
-    --main-color: #ffb142;
+    --main-color: #6a89cc;
     --link-color: #353b48;
 }
 
@@ -68,6 +68,7 @@ header {
 }
 
 .top ul {
+    background-color: var(--main-color);
     position: absolute;
     right: 0;
     margin-top: 1.4rem;
@@ -78,14 +79,10 @@ header {
 }
 
 .top ul li {
-    background-color: var(--main-color);
     display: table;
     padding: 0.6rem 0.8rem;
 }
 
-.top ul li:last-child {
-    margin-top: -0.4rem;
-}
 .top ul li button,
 .top ul li input {
     height: 1.5rem;
