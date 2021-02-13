@@ -8,7 +8,7 @@
         ROJO => #e17055
         AZUL => #6a89cc
     */
-    --main-color: #ffb142;
+    --main-color: #e17055;
     --link-color: #353b48;
 }
 
@@ -84,11 +84,11 @@ header {
 }
 
 .top ul li:last-child {
-    margin-top: -0.3rem;
+    margin-top: -0.4rem;
 }
-
+.top ul li button,
 .top ul li input {
-    padding: 0.2rem;
+    height: 1.5rem;
     border-radius: 0.2rem;
     border: 0.5px solid rgba(0, 0, 0, 0.1);
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
@@ -358,6 +358,49 @@ header div#burger_menu.open span:last-child {
     grid-column: 2;
 }
 
+.container .content-right .inscription {
+    color: var(--link-color);
+    position: relative;
+    width: 89%;
+    margin-top: 1rem;
+    padding: 1.2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #fff;
+    border-radius: 0.5rem;
+    border: 0.5px solid rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.container .content-right .inscription:hover {
+    opacity: 0.8;
+}
+
+.container .content-right .inscription hr {
+    margin: 0.4rem 0;
+    border: 1px solid var(--main-color);
+    opacity: 0.5;
+    font-weight: 300;
+}
+
+.container .content-right .inscription p {
+    text-align: justify;
+    padding: 0.2rem 0;
+}
+
+.container .content-right .inscription p:last-of-type {
+    margin-bottom: 1rem;
+}
+
+.container .content-right .inscription span {
+    opacity: 0.7;
+    position: absolute;
+    bottom: 0.5rem;
+    right: 1rem;
+}
+
 .container .content-right .results-title {
     width: 89%;
     margin-top: 1rem;
@@ -368,10 +411,9 @@ header div#burger_menu.open span:last-child {
     border-radius: 0.5rem;
     border: 0.5px solid rgba(0, 0, 0, 0.1);
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
 }
-.container .content-right .results-title h3 {
-    display: table;
-}
+
 .container .content-right .results-content {
     width: 99%;
     margin-top: 0.5rem;
@@ -410,7 +452,7 @@ header div#burger_menu.open span:last-child {
     width: 100%;
     font-size: 20px;
     font-weight: 700;
-    margin-top: 1.5rem;
+    margin-top: 1rem;
     padding: 0.5rem;
     position: absolute;
     justify-content: center;
@@ -458,7 +500,12 @@ header div#burger_menu.open span:last-child {
     color: #3b5998;
 }
 
-.social-networks .rrss-title.instagram-title,
+.social-networks .rrss-title.instagram-title {
+    background: linear-gradient(90deg, #d6249f 40%, #285aeb);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
 .social-networks .rrss-title.instagram-title i {
     background: radial-gradient(
         circle at 30% 107%,
@@ -494,6 +541,86 @@ header div#burger_menu.open span:last-child {
 .social-networks .facebook #facebook {
     display: block;
     justify-content: center;
+}
+
+/*--------FOOTER---------*/
+
+footer {
+    position: relative;
+    margin-top: 7rem;
+    padding-bottom: 3rem;
+    height: max-content;
+    background-color: var(--link-color);
+}
+
+footer .divider {
+    width: 100%;
+    height: 6rem;
+    position: absolute;
+    margin-top: -6rem;
+    left: 0;
+}
+footer .divider.toleft {
+    background: linear-gradient(
+        to left bottom,
+        transparent 49%,
+        var(--link-color) 50%
+    );
+}
+footer .divider.toright {
+    background: linear-gradient(
+        to right bottom,
+        transparent 49%,
+        var(--link-color) 50%
+    );
+}
+
+footer .page {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    overflow: hidden;
+}
+
+footer .page .footer-content {
+    margin: 0 3rem;
+    display: grid;
+    grid-template-columns: 32% 32% 32%;
+    grid-gap: 2%;
+}
+
+footer .page .footer-content h2 {
+    color: var(--main-color);
+    display: table;
+    position: relative;
+    margin-bottom: 1.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+}
+footer .page .footer-content h2::after {
+    content: "";
+    position: absolute;
+    border-radius: 0.1rem;
+    bottom: -0.5rem;
+    left: 0;
+    width: 100%;
+    height: 0.4rem;
+    background-color: var(--main-color);
+}
+
+footer .page .footer-content .footer-links ul {
+    margin-top: 2rem;
+    list-style: none;
+    line-height: normal;
+    text-align: center;
+    font-weight: 600;
+}
+
+footer .page .footer-content .footer-links ul li {
+    margin-bottom: 2rem;
+}
+
+footer .page .footer-content a:hover {
+    color: var(--main-color);
 }
 
 @media screen and (max-width: 800px) {
@@ -650,6 +777,20 @@ header div#burger_menu.open span:last-child {
 
     .social-networks {
         margin: 2rem 1rem;
+        grid-template-columns: 100%;
+        grid-gap: 2%;
+    }
+
+    footer {
+        margin-top: 10rem;
+    }
+
+    footer .divider {
+        height: 3rem;
+        margin-top: -3rem;
+    }
+
+    footer .page .footer-content {
         grid-template-columns: 100%;
         grid-gap: 2%;
     }
