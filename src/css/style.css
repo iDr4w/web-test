@@ -85,6 +85,7 @@ header {
 
 .top ul li button,
 .top ul li input {
+    margin-right: 0.2rem;
     height: 1.5rem;
     border-radius: 0.2rem;
     border: 0.5px solid rgba(0, 0, 0, 0.1);
@@ -604,6 +605,7 @@ footer .page .footer-content h2::after {
     background-color: var(--main-color);
 }
 
+footer .page .footer-content .footer-contact ul,
 footer .page .footer-content .footer-links ul {
     margin-top: 2rem;
     list-style: none;
@@ -612,6 +614,7 @@ footer .page .footer-content .footer-links ul {
     font-weight: 600;
 }
 
+footer .page .footer-content .footer-contact ul li,
 footer .page .footer-content .footer-links ul li {
     margin-bottom: 2rem;
 }
