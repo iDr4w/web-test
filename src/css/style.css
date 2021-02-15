@@ -8,7 +8,7 @@
         ROJO => #e17055
         AZUL => #6a89cc
     */
-    --main-color: #ffb142;
+    --main-color: #e17055;
     --link-color: #353b48;
 }
 
@@ -667,6 +667,32 @@ footer .page .footer-content .footer-links ul li {
 }
 
 footer .page .footer-content a:hover {
+    color: var(--main-color);
+}
+
+footer .page .footer-map {
+    padding-bottom: 0.5rem;
+}
+
+footer .author {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    padding: 1rem;
+    color: #fff;
+    opacity: 0.3;
+    transition: opacity 250ms ease-in-out;
+}
+
+footer .author:hover {
+    opacity: 0.7;
+}
+
+footer .author span {
+    cursor: default;
+}
+
+footer .author a {
     color: var(--main-color);
 }
 
