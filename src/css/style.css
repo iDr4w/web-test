@@ -30,6 +30,7 @@ html,
     margin: 0;
     padding: 0;
     font-family: "Quicksand", sans-serif;
+    scroll-behavior: smooth;
 }
 
 html.open {
@@ -588,6 +589,155 @@ header div#burger_menu.open span:last-child {
     justify-content: center;
 }
 
+input[type="radio"] {
+    display: none;
+}
+
+.container-category {
+    margin: 0 1.5rem;
+    margin-top: 22rem;
+    justify-self: center;
+    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-gap: 20px;
+}
+
+.container-category label {
+    text-align: center;
+    padding: 0.5rem 0;
+    font-size: 16px;
+    font-weight: 500;
+    background: #fff;
+    color: var(--link-color);
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    transition: all 300ms ease-in;
+}
+
+.container-category label:hover {
+    background: var(--main-color);
+    color: #fff;
+}
+
+[value="TODOS"]:checked .post [data-category~="TODOS"] {
+    display: block;
+}
+
+[value="SENIOR"]:checked ~ .container-post .post:not([data-category~="SENIOR"]),
+[value="JUNIOR"]:checked ~ .container-post .post:not([data-category~="JUNIOR"]),
+[value="CADETE"]:checked ~ .container-post .post:not([data-category~="CADETE"]),
+[value="INFANTIL"]:checked
+    ~ .container-post
+    .post:not([data-category~="INFANTIL"]),
+[value="ESCOLARES"]:checked
+    ~ .container-post
+    .post:not([data-category~="ESCOLARES"]) {
+    display: none;
+}
+
+[value="TODOS"]:checked ~ .container-category [for="TODOS"],
+[value="SENIOR"]:checked ~ .container-category [for="SENIOR"],
+[value="JUNIOR"]:checked ~ .container-category [for="JUNIOR"],
+[value="CADETE"]:checked ~ .container-category [for="CADETE"],
+[value="INFANTIL"]:checked ~ .container-category [for="INFANTIL"],
+[value="ESCOLARES"]:checked ~ .container-category [for="ESCOLARES"] {
+    background: var(--main-color);
+    color: #fff;
+}
+
+.container-post {
+    margin: 2rem 3rem;
+    height: max-content;
+    display: grid;
+    grid-template-columns: 32% 32% 32%;
+    grid-gap: 2rem;
+}
+
+.container-post .post {
+    height: max-content;
+    display: flex;
+    flex-direction: column;
+    border-radius: 6px;
+    overflow: hidden;
+    padding-bottom: 20px;
+    background: #fff;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.container-post .post .ctn-img {
+    width: 100%;
+}
+
+.container-post .post .ctn-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.container-post .post h2 {
+    font-size: 18px;
+    margin-top: 20px;
+    padding: 0 1rem;
+    color: var(--link-color);
+}
+
+.container-post .post span {
+    display: block;
+    margin-top: 10px;
+    padding: 0 20px;
+    color: var(--link-color);
+}
+
+.container-post .post .ctn-tag {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 10px;
+    margin-left: 8px;
+}
+
+.container-post .post .ctn-tag li {
+    list-style: none;
+    font-size: 14px;
+    margin: 4px 0;
+    padding: 6px 10px;
+    border-radius: 4px;
+    color: var(--tertiary-color);
+    background: var(--menu-icon-color);
+    cursor: default;
+}
+
+.container-post .post a {
+    width: 95%;
+    align-self: center;
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container-post .post a button {
+    width: 100%;
+    padding: 10px 0;
+    font-size: 16px;
+    background: var(--main-color);
+    border: none;
+    color: #ffffff;
+    cursor: pointer;
+    border-radius: 6px;
+}
+
+.container-post .post button:hover {
+    opacity: 0.8;
+}
+
+.container-post .post button:focus {
+    outline: none;
+    border: none;
+}
+
 /*--------FOOTER---------*/
 
 footer {
@@ -605,6 +755,7 @@ footer .divider {
     margin-top: -6rem;
     left: 0;
 }
+
 footer .divider.toleft {
     background: linear-gradient(
         to left bottom,
@@ -612,6 +763,7 @@ footer .divider.toleft {
         var(--main-color) 50%
     );
 }
+
 footer .divider.toright {
     background: linear-gradient(
         to right bottom,
@@ -622,7 +774,6 @@ footer .divider.toright {
 
 footer .page {
     padding-top: 2rem;
-    padding-bottom: 2rem;
     overflow: hidden;
 }
 
@@ -693,6 +844,24 @@ footer .author span {
 }
 
 footer .author a {
+    color: var(--main-color);
+}
+
+footer .copyrigth {
+    margin: 0 2rem;
+    display: flex;
+    margin-top: 5rem;
+    text-align: center;
+    justify-content: center;
+    align-self: center;
+}
+
+footer .copyrigth h4 {
+    display: table;
+    color: #fff;
+}
+
+footer .copyrigth h4 a {
     color: var(--main-color);
 }
 
@@ -870,6 +1039,17 @@ footer .author a {
         grid-gap: 2%;
     }
 
+    .container-category {
+        margin-top: 7rem;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 1rem;
+    }
+
+    .container-post {
+        margin: 2rem 1.5rem;
+        grid-template-columns: 100%;
+    }
+
     footer {
         margin-top: 10rem;
     }
@@ -882,5 +1062,9 @@ footer .author a {
     footer .page .footer-content {
         grid-template-columns: 100%;
         grid-gap: 2%;
+    }
+
+    footer .copyrigth {
+        margin-bottom: 2rem;
     }
 }
