@@ -306,9 +306,14 @@ header div#burger_menu.open span:last-child {
     color: #fff;
 }
 
-.container .content-left .articles article img {
+.container .content-left .articles article .img {
     width: 100%;
-    height: 50%;
+    height: 25rem;
+    overflow: hidden;
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
+    background-position: center !important;
+    box-shadow: inset 0px 0px 30px rgba(0, 0, 0, 0.1);
 }
 
 .container .content-left .articles article h3 {
@@ -477,6 +482,13 @@ header div#burger_menu.open span:last-child {
     width: 94%;
     border-radius: 0.5rem;
 }
+
+.container .content-right .results-content ul hr {
+    margin-left: 1rem;
+    border: 0.5px solid var(--main-color);
+    opacity: 0.4;
+}
+
 .container .content-right .results-content ul li {
     position: relative;
     margin-right: 1rem;
@@ -817,6 +829,10 @@ footer .page .footer-content .footer-links ul li {
     margin-bottom: 2rem;
 }
 
+footer .page .footer-content .footer-contact ul li i {
+    padding-right: 0.2rem;
+}
+
 footer .page .footer-content a:hover {
     color: var(--main-color);
 }
@@ -1021,6 +1037,8 @@ footer .copyrigth h4 a {
 
     .container .content-left .pagination button.btn-right,
     .container .content-left .pagination button.btn-left {
+        padding-top: 1rem;
+        padding-bottom: 1rem;
         width: 100%;
         grid-column: 1;
     }
