@@ -32,13 +32,15 @@ menu.addEventListener("click", () => {
     html.classList.toggle("open");
 });
 
-window.addEventListener("scroll", () => {
-    if (window.scrollY >= navTop) {
-        nav.classList.add("fixed");
-    } else {
-        nav.classList.remove("fixed");
-    }
-});
+if(window.innerWidth > 800){
+    window.addEventListener("scroll", () => {
+        if (window.scrollY >= navTop) {
+            nav.classList.add("fixed");
+        } else {
+            nav.classList.remove("fixed");
+        }
+    });
+}
 
 var xhReq = new XMLHttpRequest();
 xhReq.open(
