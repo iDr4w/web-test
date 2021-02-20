@@ -313,7 +313,7 @@ header div#burger_menu.open span:last-child {
     background-repeat: no-repeat !important;
     background-size: cover !important;
     background-position: center !important;
-    box-shadow: inset 0px 0px 30px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
 }
 
 .container .content-left .articles article h3 {
