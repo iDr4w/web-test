@@ -118,6 +118,10 @@ header {
     cursor: pointer;
 }
 
+.top ul > li.active a {
+    color: var(--link-color) !important;
+}
+
 .logo {
     margin-left: 6rem;
     height: 12.5rem;
@@ -278,6 +282,65 @@ header div#burger_menu.open span:last-child {
     grid-column: 1;
 }
 
+.container .content-left article.big_article {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: max-content;
+    border-radius: 1rem;
+    background-color: #fff;
+    border: 0.5px solid rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.container .content-left article.big_article .article-category {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    padding: 0.5rem 1rem;
+    background-color: var(--main-color);
+    border-radius: 0.5rem;
+    color: #fff;
+}
+
+.container .content-left article.big_article img {
+    width: 100%;
+    height: 32rem;
+}
+
+.container .content-left article.big_article h3 {
+    padding: 1rem;
+    text-align: justify;
+}
+
+.container .content-left article.big_article h3 a {
+    color: var(--link-color);
+    font-weight: 700;
+    transition: all 200ms ease-in-out;
+}
+
+.container .content-left article.big_article h3 a:hover {
+    color: var(--main-color);
+}
+
+.container .content-left article.big_article p {
+    padding: 0.5rem 1rem;
+    text-align: justify;
+}
+
+.container .content-left article.big_article p:last-of-type {
+    padding-bottom: 4rem;
+}
+
+.container .content-left article.big_article h5.date {
+    position: absolute;
+    bottom: 1.5rem;
+    left: 1.5rem;
+    color: var(--link-color);
+    opacity: 0.5;
+    font-weight: 600;
+}
+
 .container .content-left .articles {
     height: max-content;
     display: grid;
@@ -308,12 +371,11 @@ header div#burger_menu.open span:last-child {
 
 .container .content-left .articles article .img {
     width: 100%;
-    height: 25rem;
+    height: 16.5rem;
     overflow: hidden;
     background-repeat: no-repeat !important;
     background-size: cover !important;
     background-position: center !important;
-    box-shadow: inset 0px 0px 30px rgba(0, 0, 0, 0.1);
 }
 
 .container .content-left .articles article h3 {
@@ -407,12 +469,56 @@ header div#burger_menu.open span:last-child {
 
 .container .content-right {
     grid-column: 2;
+    position: relative;
+}
+
+.container .content-right .instagram_right,
+.container .content-right .twitter_right,
+.container .content-right .facebook_right {
+    margin-top: 1rem;
+    border-radius: 0.4rem;
+    width: 100%;
+    height: 4rem;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    border: 0.5px solid rgba(0, 0, 0, 0.1);
+}
+
+.container .content-right .instagram_right {
+    background: #d6249f;
+}
+.container .content-right .twitter_right {
+    background-color: #20c7ff;
+}
+.container .content-right .facebook_right {
+    background-color: #3b5998;
+}
+.container .content-right .instagram_right a,
+.container .content-right .twitter_right a,
+.container .content-right .facebook_right a {
+    width: 100%;
+    padding: 1.5rem;
+    font-weight: 600;
+    letter-spacing: 0.1rem;
+}
+
+.container .content-right .instagram_right i,
+.container .content-right .twitter_right i,
+.container .content-right .facebook_right i {
+    border: 0.5px solid rgba(0, 0, 0, 0.1);
+    width: 3rem;
+    padding: 1rem;
+    background-color: rgba(0, 0, 0, 0.1);
+    color: #fff;
+    font-size: 2rem;
+    font-weight: 200;
 }
 
 .container .content-right .inscription {
     color: var(--link-color);
     position: relative;
-    width: 89%;
+    width: 90%;
     margin-top: 1rem;
     padding: 1.2rem;
     display: flex;
@@ -833,6 +939,7 @@ footer .page .footer-content .footer-contact ul li i {
     padding-right: 0.2rem;
 }
 
+footer .page .footer-content .footer-links ul li a.active,
 footer .page .footer-content a:hover {
     color: var(--main-color);
 }
