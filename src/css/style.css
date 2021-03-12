@@ -1273,6 +1273,11 @@ footer .copyrigth h4 a {
     .container-error {
         margin: 6rem 1.5rem 0 1.5rem;
     }
+
+    .container-error .error .img img {
+        transform: translateY(9rem) scale(0.7);
+    }
+
     .container-error .error .text {
         padding: 0.5rem;
     }
