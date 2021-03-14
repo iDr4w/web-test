@@ -606,7 +606,7 @@ header div#burger_menu.open span:last-child {
     width: 89%;
     margin-top: 1rem;
     padding: 1.2rem;
-    display: flex;
+    line-height: 2.5rem;
     justify-content: center;
     background-color: #fff;
     border-radius: 0.5rem;
